@@ -7,7 +7,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ddd;
     line-height: 1.65;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
 }
 
 /*Latihan 1*/
@@ -20,3 +20,12 @@ body {
     display: flex;
 }
 
+.sidebar-satu {
+    width: 2000px;
+    order: -1;
+}
+
+.sidebar-dua {
+    width: 1500px;
+    order: 1;
+}
