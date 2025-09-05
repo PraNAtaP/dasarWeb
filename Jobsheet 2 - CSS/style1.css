@@ -1,31 +1,97 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
+    background: #f4f4f4b9;
     line-height: 1.65;
-    padding-bottom: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*Latihan 1*/
 .container-satu {
-    width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
+    border: 5px solid #222;
+    width: 900px;
+    background: rgba(0, 247, 255, 0.575);
+    padding: 24px;
     box-sizing: border-box;
     display: flex;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.15);
+    gap: 24px;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+    margin: 0 16px;
+    text-align: justify;
+}
+
+.kolom-utama h2 {
+    text-align: center;
+    margin-bottom: 18px;
 }
 
 .sidebar-satu {
-    width: 2000px;
-    order: -1;
+    flex: 1;
+    order: 1;
+    background: rgba(252, 252, 252, 0.904);
+    border-radius: 10px;
+    padding: 16px;
+    margin-right: 0;
+}
+
+.sidebar-satu h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.sidebar-satu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar-satu li {
+    margin-bottom: 16px;
+}
+
+.sidebar-satu a {
+    text-decoration: none;
+    color: #222;
+    transition: font-size 0.2s;
+}
+
+.sidebar-satu a:hover {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.sidebar-satu img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 16px auto 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .sidebar-dua {
-    width: 1500px;
-    order: 1;
+    flex: 1;
+    order: 3;
+    background: rgba(252, 252, 252, 0.904);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: justify;
+}
+
+.sidebar-dua h3 {
+    text-align: center;
+    margin-top: 0;
 }
