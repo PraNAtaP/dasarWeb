@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow (Refactored)</title>
+    <link rel="stylesheet" type="text/css" href="styleSlideShow.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const items = $('#slider > div');
+            const totalItems = items.length;
+            items.hide().eq(currentIndex).show(); 
+
+            function showNextSlide() {
+                items.eq(currentIndex).fadeOut(1100); 
+
+                currentIndex = (currentIndex + 1) % totalItems; 
+
+                items.eq(currentIndex).delay(500).fadeIn(1100); 
+            }
+            setInterval(showNextSlide, 3000);
+        });
+    </script>
+    <style>
+        #slider { position: relative; width: 400px; height: 300px; }
+        #slider > div { position: absolute; }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <div class="slide-item">
+            <img src="img/gambar1.jpeg" alt="Gambar 1">
+            <div class="slidertitle">Gambar 1</div>
+        </div>
+        <div class="slide-item">
+            <img src="img/gambar2.jpg" alt="Gambar 2">
+            <div class="slidertitle">Gambar 2</div>
+        </div>
+        <div class="slide-item">
+            <img src="img/gambar3.jpeg" alt="Gambar 3">
+            <div class="slidertitle">Gambar 3</div>
+        </div>
+    </div>
+</body>
+</html>
