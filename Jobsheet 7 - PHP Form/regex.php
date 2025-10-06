@@ -1,8 +1,8 @@
 <?php
-$pattern = '/go*d/';
-$text = 'god is good.';
-if (preg_match($pattern, $text, $matches)) {
-    echo "Cocokkan : $matches[0]";
+$pattern = '/go?d/';
+$text = 'gd god good';
+if (preg_match_all($pattern, $text, $matches)) {
+    echo "Cocok di : " . implode(', ', $matches[0]);
 } else {
     echo "Tidak ada yang cocok!";
 }
