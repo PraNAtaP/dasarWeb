@@ -2,6 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST["nama"];
     $email = $_POST["email"];
+    $password = $_POST["password"];
     $errors = array();
 
     if (empty($nama)) {
@@ -14,12 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Format email tidak valid.";
     }
 
+    if (empty($password)) {
+        $errors[] = "Password harus diisi.";
+    } elseif (strlen($password) < 8) {
+        $errors[] = "Password minimal 8 karakter.";
+    }
+
     if (!empty($errors)) {
         foreach ($errors as $error) {
             echo "<span style='color:red;'>$error</span><br>";
         }
     } else {
-        echo "<span style='color:green;'>Data berhasil dikirim: Nama = $nama, Email = $email</span>";
+        echo "<span style='color:green;'>Data berhasil dikirim: 
+              Nama = $nama, Email = $email, Password = $password</span>";
     }
 }
 ?>
